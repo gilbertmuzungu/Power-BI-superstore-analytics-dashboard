@@ -36,6 +36,7 @@ Established a relationship between the Date Table and Orders table.
 3. DAX Measures
 Key Metrics
 DAX
+
 Sales = SUM(Orders[Sales])
 
 Profit = SUM(Orders[Profit])
@@ -48,6 +49,7 @@ RETURN _perc
 Year-over-Year Comparisons
 
 DAX
+
 Sales PY = CALCULATE([Sales], SAMEPERIODLASTYEAR('Date Table'[Date]))
 
 Profit PY = CALCULATE([Profit], SAMEPERIODLASTYEAR('Date Table'[Date]))
@@ -55,11 +57,13 @@ Profit PY = CALCULATE([Profit], SAMEPERIODLASTYEAR('Date Table'[Date]))
 % Returned orders PY =
 CALCULATE([% Returned orders], SAMEPERIODLASTYEAR('Date Table'[Date]))
 
+
 vs - % returned orders = [% Returned orders] - [% Returned orders PY]
 
 vs PY - profit = DIVIDE([Profit] - [Profit PY], [Profit PY])
 
 vs PY - Sales = DIVIDE([Sales] - [Sales PY], [Sales PY])
+
 
 4. Visualizations
 The dashboard includes:
@@ -93,6 +97,7 @@ Country/Region
 Date
 
 🎯 Key Insights
+
 Identified top-performing product categories and high-return products.
 
 Highlighted regions and states with highest profitability.
@@ -100,6 +105,7 @@ Highlighted regions and states with highest profitability.
 Year-over-year growth trends in sales and profit.
 
 Segment-wise contribution to total sales.
+
 
 🛠 Tools & Technologies
 Power BI Desktop
